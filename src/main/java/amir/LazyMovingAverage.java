@@ -17,6 +17,7 @@ public class LazyMovingAverage implements Average {
     values[index] = number;
     index++;
 
+    // could use a modulus operator instead but could eventually run into a overflow exception
     if (index == values.length) {
       index = index - values.length;
     }
