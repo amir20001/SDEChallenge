@@ -1,15 +1,22 @@
 package amir;
 
+/**
+ * LazyMovingAverage
+ *
+ * Not thread safe should not be used in a multi threaded manner
+ */
+
 public class LazyMovingAverage implements Average {
 
   private Number[] values;
-  private int index = 0;
+  private int index;
 
   public LazyMovingAverage(int size) {
     if (size <= 0) {
       throw new IllegalArgumentException("invalid size: " + size + " must be a positive number");
     }
     values = new Number[size];
+    index = 0;
   }
 
   @Override

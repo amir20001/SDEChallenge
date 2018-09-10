@@ -8,15 +8,18 @@ package amir;
 public class ConstantTimeMovingAverage implements Average {
 
   private Number[] values;
-  private int index = 0;
-  private double total = 0;
-  private double average = 0;
+  private int index;
+  private double total;
+  private double average;
 
   public ConstantTimeMovingAverage(int size) {
     if (size <= 0) {
       throw new IllegalArgumentException("invalid size: " + size + " must be a positive number");
     }
     values = new Number[size];
+    index = 0;
+    total = 0;
+    average = 0;
   }
 
   /**

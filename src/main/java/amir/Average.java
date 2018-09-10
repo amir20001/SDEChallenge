@@ -1,12 +1,15 @@
 package amir;
 
 /**
- * MovingAverage
+ * Average
  *
  * Interface for a generic moving average structure.
  *
+ * This interface uses the number class to allow for all numeric values to be passed in.
+ * Alternatively if we want all the type to be the same we could type the interface
  */
-public interface Average {
+
+public interface Average<T> {
 
   /**
    *
